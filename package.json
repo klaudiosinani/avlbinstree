@@ -11,5 +11,17 @@
   },
   "engines": {
     "node": ">=6"
-  }
+  },
+  "keywords": [
+    "avl",
+    "self",
+    "balancing",
+    "binary",
+    "search",
+    "tree",
+    "es6",
+    "data",
+    "structure",
+    "typescript"
+  ]
 }
