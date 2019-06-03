@@ -1,0 +1,15 @@
+{
+  "name": "avlbinstree",
+  "version": "0.0.0",
+  "description": "AVL self-balancing binary search trees for ES6",
+  "license": "MIT",
+  "repository": "klaussinani/avlbinstree",
+  "author": {
+    "name": "Klaus Sinani",
+    "email": "klaussinani@gmail.com",
+    "url": "https://klaussinani.github.io"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
