@@ -3,6 +3,7 @@
 class Node {
   constructor() {
     this._left = null;
+    this._right = null;
   }
 }
 
