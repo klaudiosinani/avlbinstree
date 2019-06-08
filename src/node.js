@@ -70,6 +70,10 @@ class Node {
     return !this.left && !this.right;
   }
 
+  isPartial() {
+    return this.degree === 1;
+  }
+
   toPair() {
     return [this.key, this.value];
   }
