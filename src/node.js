@@ -15,6 +15,10 @@ class Node {
   get right() {
     return this._right;
   }
+
+  get key() {
+    return this._key;
+  }
 }
 
 module.exports = Node;
