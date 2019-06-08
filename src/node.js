@@ -22,6 +22,10 @@ class Node {
     return children;
   }
 
+  get degree() {
+    return this.children.length;
+  }
+
   get left() {
     return this._left;
   }
