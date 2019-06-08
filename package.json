@@ -24,6 +24,9 @@
     "structure",
     "typescript"
   ],
+  "scripts": {
+    "lint": "xo"
+  },
   "devDependencies": {
     "ava": "1.4.1",
     "coveralls": "^3.0.3",
