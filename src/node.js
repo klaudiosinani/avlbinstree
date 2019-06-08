@@ -69,6 +69,10 @@ class Node {
   isLeaf() {
     return !this.left && !this.right;
   }
+
+  toPair() {
+    return [this.key, this.value];
+  }
 }
 
 module.exports = Node;
