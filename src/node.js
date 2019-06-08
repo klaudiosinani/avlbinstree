@@ -11,6 +11,10 @@ class Node {
   get left() {
     return this._left;
   }
+
+  get right() {
+    return this._right;
+  }
 }
 
 module.exports = Node;
