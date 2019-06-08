@@ -66,6 +66,10 @@ class Node {
     return this.left !== null && this.right !== null;
   }
 
+  isInternal() {
+    return this.left !== null || this.right !== null;
+  }
+
   isLeaf() {
     return !this.left && !this.right;
   }
