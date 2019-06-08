@@ -8,6 +8,20 @@ class Node {
     this._value = value;
   }
 
+  get children() {
+    const children = [];
+
+    if (this.left) {
+      children.push(this.left);
+    }
+
+    if (this.right) {
+      children.push(this.right);
+    }
+
+    return children;
+  }
+
   get left() {
     return this._left;
   }
