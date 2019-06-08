@@ -61,6 +61,10 @@ class Node {
   set value(value) {
     this._value = value;
   }
+
+  isFull() {
+    return this.left !== null && this.right !== null;
+  }
 }
 
 module.exports = Node;
