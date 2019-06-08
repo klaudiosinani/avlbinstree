@@ -24,6 +24,14 @@ class Node {
     return this._right;
   }
 
+  set right(node) {
+    if (node && node.key <= this.key) {
+      throw new Error('Right child node key must be greater than the parent node key');
+    }
+
+    this._right = node;
+  }
+
   get key() {
     return this._key;
   }
