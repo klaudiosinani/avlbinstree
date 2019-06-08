@@ -7,6 +7,10 @@ class Node {
     this._key = key;
     this._value = value;
   }
+
+  get left() {
+    return this._left;
+  }
 }
 
 module.exports = Node;
