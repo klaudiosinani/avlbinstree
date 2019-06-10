@@ -13,6 +13,10 @@ class Tree {
     this._root = null;
     return this;
   }
+
+  isEmpty() {
+    return !this.root;
+  }
 }
 
 module.exports = Tree;
