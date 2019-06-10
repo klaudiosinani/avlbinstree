@@ -30,6 +30,7 @@ declare namespace tree {
   export interface Instance<T> {
     readonly root: Node<T> | null;
     clear(): this;
+    isEmpty(): boolean;
   }
 }
 
