@@ -2,6 +2,7 @@
 
 class Node {
   constructor(key, value) {
+    this._height = null;
     this._left = null;
     this._right = null;
     this._key = key;
