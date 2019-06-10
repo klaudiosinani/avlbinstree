@@ -14,6 +14,20 @@ class Tree {
     return this;
   }
 
+  includes(key) {
+    let {root: current} = this;
+
+    while (current) {
+      if (key === current.key) {
+        return true;
+      }
+
+      current = key < current.key ? current.left : current.right;
+    }
+
+    return false;
+  }
+
   isEmpty() {
     return !this.root;
   }
