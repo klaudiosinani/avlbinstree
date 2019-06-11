@@ -89,6 +89,16 @@ class Tree {
 
     return null;
   }
+
+  minValue() {
+    const node = this.min();
+
+    if (node) {
+      return node.value;
+    }
+
+    return null;
+  }
 }
 
 module.exports = Tree;

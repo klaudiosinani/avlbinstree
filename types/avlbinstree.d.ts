@@ -37,6 +37,7 @@ declare namespace tree {
     maxValue(): T | null;
     min(): Node<T> | null;
     minKey(): number | null;
+    minValue(): T | null;
   }
 }
 
