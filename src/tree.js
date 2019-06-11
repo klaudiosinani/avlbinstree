@@ -31,6 +31,18 @@ class Tree {
   isEmpty() {
     return !this.root;
   }
+
+  max() {
+    let {root: max} = this;
+
+    if (max) {
+      while (max.right) {
+        max = max.right;
+      }
+    }
+
+    return max;
+  }
 }
 
 module.exports = Tree;
