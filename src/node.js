@@ -27,6 +27,10 @@ class Node {
     return this.children.length;
   }
 
+  get height() {
+    return this._height;
+  }
+
   get left() {
     return this._left;
   }
