@@ -79,6 +79,16 @@ class Tree {
   min() {
     return this._min(this.root);
   }
+
+  minKey() {
+    const node = this.min();
+
+    if (node) {
+      return node.key;
+    }
+
+    return null;
+  }
 }
 
 module.exports = Tree;
