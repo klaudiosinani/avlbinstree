@@ -55,6 +55,10 @@ class Tree {
 
     return max;
   }
+
+  min() {
+    return this._min(this.root);
+  }
 }
 
 module.exports = Tree;
