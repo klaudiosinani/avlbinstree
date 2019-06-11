@@ -56,6 +56,16 @@ class Tree {
     return max;
   }
 
+  maxKey() {
+    const node = this.max();
+
+    if (node) {
+      return node.key;
+    }
+
+    return null;
+  }
+
   maxValue() {
     const node = this.max();
 
