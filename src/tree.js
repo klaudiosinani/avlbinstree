@@ -9,6 +9,18 @@ class Tree {
     return this._root;
   }
 
+  _min(node) {
+    let min = node;
+
+    if (min) {
+      while (min.left) {
+        min = min.left;
+      }
+    }
+
+    return min;
+  }
+
   clear() {
     this._root = null;
     return this;
