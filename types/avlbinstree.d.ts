@@ -33,6 +33,7 @@ declare namespace tree {
     includes(key: number): boolean;
     isEmpty(): boolean;
     max(): Node<T> | null;
+    maxValue(): T | null;
     min(): Node<T> | null;
   }
 }
