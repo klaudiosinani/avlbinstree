@@ -21,6 +21,14 @@ class Tree {
     return min;
   }
 
+  _prop(obj, p) {
+    if (obj) {
+      return obj[p];
+    }
+
+    return null;
+  }
+
   clear() {
     this._root = null;
     return this;
