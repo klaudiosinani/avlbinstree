@@ -65,23 +65,11 @@ class Tree {
   }
 
   maxKey() {
-    const node = this.max();
-
-    if (node) {
-      return node.key;
-    }
-
-    return null;
+    return this._prop(this.max(), 'key');
   }
 
   maxValue() {
-    const node = this.max();
-
-    if (node) {
-      return node.value;
-    }
-
-    return null;
+    return this._prop(this.max(), 'value');
   }
 
   min() {
@@ -89,23 +77,11 @@ class Tree {
   }
 
   minKey() {
-    const node = this.min();
-
-    if (node) {
-      return node.key;
-    }
-
-    return null;
+    return this._prop(this.min(), 'key');
   }
 
   minValue() {
-    const node = this.min();
-
-    if (node) {
-      return node.value;
-    }
-
-    return null;
+    return this._prop(this.min(), 'value');
   }
 }
 
