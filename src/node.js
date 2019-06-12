@@ -9,6 +9,10 @@ class Node {
     this._value = value;
   }
 
+  get balanceFactor() {
+    return this.right.height - this.left.height;
+  }
+
   get children() {
     const children = [];
 
