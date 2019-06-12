@@ -95,6 +95,14 @@ class Node {
     return !this.left && this.right !== null;
   }
 
+  leftChildHeight() {
+    if (this.left) {
+      return this.left.height;
+    }
+
+    return -1;
+  }
+
   rightChildHeight() {
     if (this.right) {
       return this.right.height;
