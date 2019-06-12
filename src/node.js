@@ -95,6 +95,14 @@ class Node {
     return !this.left && this.right !== null;
   }
 
+  rightChildHeight() {
+    if (this.right) {
+      return this.right.height;
+    }
+
+    return -1;
+  }
+
   toPair() {
     return [this.key, this.value];
   }
