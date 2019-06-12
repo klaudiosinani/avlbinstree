@@ -17,6 +17,7 @@ declare namespace node {
     isLeftPartial(): boolean;
     isPartial(): boolean;
     isRightPartial(): boolean;
+    leftChildHeight(): number;
     rightChildHeight(): number;
     toPair(): [number, T];
   }
