@@ -83,6 +83,10 @@ class Node {
     return !this.left && !this.right;
   }
 
+  isLeftHeavy() {
+    return this.balanceFactor < 0;
+  }
+
   isLeftPartial() {
     return this.left !== null && !this.right;
   }
