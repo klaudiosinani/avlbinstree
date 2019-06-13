@@ -17,6 +17,7 @@ declare namespace node {
     isLeftHeavy(): boolean;
     isLeftPartial(): boolean;
     isPartial(): boolean;
+    isRightHeavy(): boolean;
     isRightPartial(): boolean;
     leftChildHeight(): number;
     rightChildHeight(): number;
