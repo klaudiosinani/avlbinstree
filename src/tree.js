@@ -83,6 +83,20 @@ class Tree {
   minValue() {
     return this._prop(this.min(), 'value');
   }
+
+  search(key) {
+    let {root: current} = this;
+
+    while (current) {
+      if (key === current.key) {
+        return current;
+      }
+
+      current = key < current.key ? current.left : current.right;
+    }
+
+    return current;
+  }
 }
 
 module.exports = Tree;

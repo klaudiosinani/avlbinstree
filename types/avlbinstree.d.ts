@@ -43,6 +43,7 @@ declare namespace tree {
     min(): Node<T> | null;
     minKey(): number | null;
     minValue(): T | null;
+    search(key: number): Node<T> | null;
   }
 }
 
