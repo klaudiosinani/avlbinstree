@@ -95,6 +95,10 @@ class Node {
     return this.degree === 1;
   }
 
+  isRightHeavy() {
+    return this.balanceFactor > 0;
+  }
+
   isRightPartial() {
     return !this.left && this.right !== null;
   }
