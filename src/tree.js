@@ -121,7 +121,7 @@ class Tree {
   }
 
   preOrder(fn) {
-    let {_root: current} = this;
+    let {root: current} = this;
 
     if (current) {
       const stack = [current];
