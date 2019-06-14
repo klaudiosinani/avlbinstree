@@ -48,6 +48,24 @@ class Tree {
     return false;
   }
 
+  inOrder(fn) {
+    const stack = [];
+    let {root: current} = this;
+
+    while (current || stack.length > 0) {
+      if (current) {
+        stack.push(current);
+        current = current.left;
+      } else {
+        current = stack.pop();
+        fn(current);
+        current = current.right;
+      }
+    }
+
+    return this;
+  }
+
   isEmpty() {
     return !this.root;
   }

@@ -38,6 +38,7 @@ declare namespace tree {
     readonly root: Node<T> | null;
     clear(): this;
     includes(key: number): boolean;
+    inOrder(fn: UnaryCallback<Node<T>>): this;
     isEmpty(): boolean;
     max(): Node<T> | null;
     maxKey(): number | null;
