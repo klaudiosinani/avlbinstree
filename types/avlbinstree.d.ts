@@ -47,6 +47,7 @@ declare namespace tree {
     minKey(): number | null;
     minValue(): T | null;
     search(key: number): Node<T> | null;
+    size(): number;
     toArray(): Node<T>[];
     toPairs(): [number, T][];
   }

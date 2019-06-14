@@ -116,6 +116,12 @@ class Tree {
     return current;
   }
 
+  size() {
+    let size = 0;
+    this.inOrder(() => size++);
+    return size;
+  }
+
   toArray() {
     const array = [];
     this.inOrder(node => array.push(node));
