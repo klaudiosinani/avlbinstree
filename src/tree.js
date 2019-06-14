@@ -102,6 +102,24 @@ class Tree {
     return this._prop(this.min(), 'value');
   }
 
+  outOrder(fn) {
+    const stack = [];
+    let {root: current} = this;
+
+    while (current || stack.length > 0) {
+      if (current) {
+        stack.push(current);
+        current = current.right;
+      } else {
+        current = stack.pop();
+        fn(current);
+        current = current.left;
+      }
+    }
+
+    return this;
+  }
+
   search(key) {
     let {root: current} = this;
 
