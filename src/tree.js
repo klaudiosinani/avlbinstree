@@ -115,6 +115,12 @@ class Tree {
 
     return current;
   }
+
+  toArray() {
+    const array = [];
+    this.inOrder(node => array.push(node));
+    return array;
+  }
 }
 
 module.exports = Tree;
