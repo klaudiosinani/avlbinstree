@@ -120,6 +120,29 @@ class Tree {
     return this;
   }
 
+  preOrder(fn) {
+    let {_root: current} = this;
+
+    if (current) {
+      const stack = [current];
+
+      while (stack.length > 0) {
+        current = stack.pop();
+        fn(current);
+
+        if (current.right) {
+          stack.push(current.right);
+        }
+
+        if (current.left) {
+          stack.push(current.left);
+        }
+      }
+    }
+
+    return this;
+  }
+
   search(key) {
     let {root: current} = this;
 

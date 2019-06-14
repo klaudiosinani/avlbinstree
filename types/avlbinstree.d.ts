@@ -47,6 +47,7 @@ declare namespace tree {
     minKey(): number | null;
     minValue(): T | null;
     outOrder(fn: UnaryCallback<Node<T>>): this;
+    preOrder(fn: UnaryCallback<Node<T>>): this;
     search(key: number): Node<T> | null;
     size(): number;
     toArray(): Node<T>[];
