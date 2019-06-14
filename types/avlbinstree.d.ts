@@ -26,6 +26,8 @@ declare namespace node {
 }
 
 declare namespace tree {
+  type UnaryCallback<T> = (x: T) => void;
+
   interface Node<T> extends node.Instance<T> {}
 
   export interface Constructor {
