@@ -82,6 +82,18 @@ class Tree {
     return !this.root;
   }
 
+  leafNodes() {
+    const nodes = [];
+
+    this.inOrder(node => {
+      if (node.isLeaf()) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   levelOrder(fn) {
     let {root: current} = this;
 
