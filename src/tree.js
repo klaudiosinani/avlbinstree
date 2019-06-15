@@ -34,6 +34,18 @@ class Tree {
     return this;
   }
 
+  fullNodes() {
+    const nodes = [];
+
+    this.inOrder(node => {
+      if (node.isFull()) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   includes(key) {
     let {root: current} = this;
 

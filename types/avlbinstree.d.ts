@@ -37,6 +37,7 @@ declare namespace tree {
   export interface Instance<T> {
     readonly root: Node<T> | null;
     clear(): this;
+    fullNodes(): Node<T>[];
     includes(key: number): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
     internalNodes(): Node<T>[];
