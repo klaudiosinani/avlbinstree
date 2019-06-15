@@ -40,6 +40,7 @@ declare namespace tree {
     includes(key: number): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
     isEmpty(): boolean;
+    levelOrder(fn: UnaryCallback<Node<T>>): this;
     max(): Node<T> | null;
     maxKey(): number | null;
     maxValue(): T | null;

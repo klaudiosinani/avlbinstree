@@ -70,6 +70,23 @@ class Tree {
     return !this.root;
   }
 
+  levelOrder(fn) {
+    let {root: current} = this;
+
+    if (current) {
+      const queue = [];
+      queue.push(current);
+
+      while (queue.length > 0) {
+        current = queue.shift();
+        fn(current);
+        queue.push(...current.children);
+      }
+    }
+
+    return this;
+  }
+
   max() {
     let {root: max} = this;
 
