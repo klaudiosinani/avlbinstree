@@ -39,6 +39,7 @@ declare namespace tree {
     clear(): this;
     includes(key: number): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
+    internalNodes(): Node<T>[];
     isEmpty(): boolean;
     levelOrder(fn: UnaryCallback<Node<T>>): this;
     max(): Node<T> | null;
