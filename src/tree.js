@@ -66,6 +66,18 @@ class Tree {
     return this;
   }
 
+  internalNodes() {
+    const nodes = [];
+
+    this.inOrder(node => {
+      if (node.isInternal()) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   isEmpty() {
     return !this.root;
   }
