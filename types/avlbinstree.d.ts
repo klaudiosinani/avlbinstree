@@ -41,6 +41,7 @@ declare namespace tree {
     inOrder(fn: UnaryCallback<Node<T>>): this;
     internalNodes(): Node<T>[];
     isEmpty(): boolean;
+    leafNodes(): Node<T>[];
     levelOrder(fn: UnaryCallback<Node<T>>): this;
     max(): Node<T> | null;
     maxKey(): number | null;
