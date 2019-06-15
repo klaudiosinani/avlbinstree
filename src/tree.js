@@ -120,6 +120,30 @@ class Tree {
     return this;
   }
 
+  postOrder(fn) {
+    let last = null;
+    const stack = [];
+    let {root: current} = this;
+
+    while (current || stack.length > 0) {
+      if (current) {
+        stack.push(current);
+        current = current.left;
+      } else {
+        const recent = stack[stack.length - 1];
+
+        if (recent.right && recent.right !== last) {
+          current = recent.right;
+        } else {
+          fn(recent);
+          last = stack.pop();
+        }
+      }
+    }
+
+    return this;
+  }
+
   preOrder(fn) {
     let {root: current} = this;
 
