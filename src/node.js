@@ -96,7 +96,7 @@ class Node {
   }
 
   isRightHeavy() {
-    return this.balanceFactor > 0;
+    return this.balanceFactor < 0;
   }
 
   isRightPartial() {
