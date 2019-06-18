@@ -261,6 +261,12 @@ class Tree {
     this.inOrder(node => array.push(node.toPair()));
     return array;
   }
+
+  values() {
+    const values = [];
+    this.inOrder(node => values.push(node.value));
+    return values;
+  }
 }
 
 module.exports = Tree;
