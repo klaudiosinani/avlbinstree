@@ -96,11 +96,7 @@ class Tree {
 
   keys() {
     const keys = [];
-
-    this.inOrder(node => {
-      keys.push(node.key);
-    });
-
+    this.inOrder(node => keys.push(node.key));
     return keys;
   }
 
