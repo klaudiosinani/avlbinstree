@@ -10,7 +10,7 @@ class Node {
   }
 
   get balanceFactor() {
-    return this.rightChildHeight() - this.leftChildHeight();
+    return this.leftChildHeight() - this.rightChildHeight();
   }
 
   get children() {
