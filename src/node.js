@@ -84,7 +84,7 @@ class Node {
   }
 
   isLeftHeavy() {
-    return this.balanceFactor < 0;
+    return this.balanceFactor > 0;
   }
 
   isLeftPartial() {
