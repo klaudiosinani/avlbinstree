@@ -111,6 +111,10 @@ class Node {
     return -1;
   }
 
+  maxChildHeight() {
+    return Math.max(this.leftChildHeight(), this.rightChildHeight());
+  }
+
   rightChildHeight() {
     if (this.right) {
       return this.right.height;

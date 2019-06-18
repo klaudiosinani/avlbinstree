@@ -20,6 +20,7 @@ declare namespace node {
     isRightHeavy(): boolean;
     isRightPartial(): boolean;
     leftChildHeight(): number;
+    maxChildHeight(): number;
     rightChildHeight(): number;
     toPair(): [number, T];
   }
