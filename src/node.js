@@ -9,6 +9,28 @@ class Node {
     this._value = value;
   }
 
+  _rotateLeft() {
+    const {right} = this;
+    this.right = right.left;
+    right.left = this;
+
+    this._height = this.maxChildHeight() + 1;
+    right._height = right.maxChildHeight() + 1;
+
+    return right;
+  }
+
+  _rotateRight() {
+    const {left} = this;
+    this.left = left.right;
+    left.right = this;
+
+    this._height = this.maxChildHeight() + 1;
+    left._height = left.maxChildHeight() + 1;
+
+    return left;
+  }
+
   get balanceFactor() {
     return this.leftChildHeight() - this.rightChildHeight();
   }
@@ -121,17 +143,6 @@ class Node {
     }
 
     return -1;
-  }
-
-  _rotateRight() {
-    const {left} = this;
-    this.left = left.right;
-    left.right = this;
-
-    this._height = this.maxChildHeight() + 1;
-    left._height = left.maxChildHeight() + 1;
-
-    return left;
   }
 
   toPair() {
