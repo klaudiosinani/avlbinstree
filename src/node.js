@@ -123,6 +123,17 @@ class Node {
     return -1;
   }
 
+  _rotateRight() {
+    const {left} = this;
+    this.left = left.right;
+    left.right = this;
+
+    this._height = this.maxChildHeight() + 1;
+    left._height = left.maxChildHeight() + 1;
+
+    return left;
+  }
+
   toPair() {
     return [this.key, this.value];
   }
