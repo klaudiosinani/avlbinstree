@@ -44,6 +44,7 @@ declare namespace tree {
     insert(key: number, value: T): this;
     internalNodes(): Node<T>[];
     isEmpty(): boolean;
+    isPerfect(): boolean;
     keys(): number[];
     leafNodes(): Node<T>[];
     levelOrder(fn: UnaryCallback<Node<T>>): this;
