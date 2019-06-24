@@ -1,4 +1,5 @@
 'use strict';
+const Node = require('./node');
 
 class Tree {
   constructor() {
@@ -7,6 +8,44 @@ class Tree {
 
   get root() {
     return this._root;
+  }
+
+  _insert(key, value, target) {
+    if (!target) {
+      return new Node(key, value);
+    }
+
+    if (key === target.key) {
+      return target;
+    }
+
+    if (key < target.key) {
+      target.left = this._insert(key, value, target.left);
+    } else {
+      target.right = this._insert(key, value, target.right);
+    }
+
+    target._height = target.maxChildHeight() + 1;
+
+    if (target.balanceFactor === 2) {
+      if (target.left.isRightHeavy()) {
+        target.left = target.left._rotateLeft();
+        return target._rotateRight();
+      }
+
+      target = target._rotateRight();
+    }
+
+    if (target.balanceFactor === -2) {
+      if (target.right.isLeftHeavy()) {
+        target.right = target.right._rotateRight();
+        return target._rotateLeft();
+      }
+
+      target = target._rotateLeft();
+    }
+
+    return target;
   }
 
   _min(node) {
@@ -75,6 +114,11 @@ class Tree {
       }
     }
 
+    return this;
+  }
+
+  insert(key, value) {
+    this._root = this._insert(key, value, this._root);
     return this;
   }
 
