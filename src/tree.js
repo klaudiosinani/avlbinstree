@@ -134,6 +134,37 @@ class Tree {
     return nodes;
   }
 
+  isComplete() {
+    let {root: current} = this;
+
+    if (current) {
+      const queue = [current];
+      let sawNonFull = false;
+
+      while (queue.length > 0) {
+        current = queue.shift();
+
+        if (current.isRightPartial()) {
+          return false;
+        }
+
+        if (current.isLeaf()) {
+          sawNonFull = true;
+        } else {
+          if (sawNonFull) {
+            return false;
+          }
+
+          const {children} = current;
+          sawNonFull = children.length < 2;
+          queue.push(...children);
+        }
+      }
+    }
+
+    return true;
+  }
+
   isEmpty() {
     return !this.root;
   }
