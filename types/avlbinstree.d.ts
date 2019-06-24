@@ -41,6 +41,7 @@ declare namespace tree {
     fullNodes(): Node<T>[];
     includes(key: number): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
+    insert(key: number, value: T): this;
     internalNodes(): Node<T>[];
     isEmpty(): boolean;
     keys(): number[];
