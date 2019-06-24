@@ -44,6 +44,7 @@ declare namespace tree {
     insert(key: number, value: T): this;
     internalNodes(): Node<T>[];
     isEmpty(): boolean;
+    isFull(): boolean;
     isPerfect(): boolean;
     keys(): number[];
     leafNodes(): Node<T>[];
