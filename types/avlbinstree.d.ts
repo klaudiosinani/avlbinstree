@@ -11,6 +11,7 @@ declare namespace node {
     readonly key: number;
     readonly children: Instance<T>[];
     readonly degree: 0 | 1 | 2;
+    isBalanced(): boolean;
     isFull(): boolean;
     isInternal(): boolean;
     isLeaf(): boolean;
