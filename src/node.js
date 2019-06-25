@@ -93,6 +93,10 @@ class Node {
     this._value = value;
   }
 
+  isBalanced() {
+    return this.balanceFactor === 0;
+  }
+
   isFull() {
     return this.left !== null && this.right !== null;
   }
