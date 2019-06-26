@@ -10,6 +10,26 @@ class Tree {
     return this._root;
   }
 
+  _balanceSubtree(node) {
+    if (node.balanceFactor === 2) {
+      if (node.left.isRightHeavy()) {
+        node.left = node.left._rotateLeft();
+      }
+
+      return node._rotateRight();
+    }
+
+    if (node.balanceFactor === -2) {
+      if (node.right.isLeftHeavy()) {
+        node.right = node.right._rotateRight();
+      }
+
+      return node._rotateLeft();
+    }
+
+    return node;
+  }
+
   _insert(key, value, target) {
     if (!target) {
       return new Node(key, value);
@@ -27,23 +47,7 @@ class Tree {
 
     target._height = target.maxChildHeight() + 1;
 
-    if (target.balanceFactor === 2) {
-      if (target.left.isRightHeavy()) {
-        target.left = target.left._rotateLeft();
-      }
-
-      return target._rotateRight();
-    }
-
-    if (target.balanceFactor === -2) {
-      if (target.right.isLeftHeavy()) {
-        target.right = target.right._rotateRight();
-      }
-
-      return target._rotateLeft();
-    }
-
-    return target;
+    return this._balanceSubtree(target);
   }
 
   _isBalanced() {
