@@ -30,19 +30,17 @@ class Tree {
     if (target.balanceFactor === 2) {
       if (target.left.isRightHeavy()) {
         target.left = target.left._rotateLeft();
-        return target._rotateRight();
       }
 
-      target = target._rotateRight();
+      return target._rotateRight();
     }
 
     if (target.balanceFactor === -2) {
       if (target.right.isLeftHeavy()) {
         target.right = target.right._rotateRight();
-        return target._rotateLeft();
       }
 
-      target = target._rotateLeft();
+      return target._rotateLeft();
     }
 
     return target;
