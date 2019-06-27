@@ -149,6 +149,16 @@ class Tree {
     return nodes;
   }
 
+  height() {
+    const {root} = this;
+
+    if (root) {
+      return root.height;
+    }
+
+    return -1;
+  }
+
   includes(key) {
     let {root: current} = this;
 
