@@ -24,3 +24,18 @@ Visit the [contributing guidelines](https://github.com/klaussinani/avlbinstree/b
 ## Contents
 
 - [Description](#description)
+- [Install](#install)
+
+## Install
+
+### Yarn
+
+```bash
+yarn add avlbinstree
+```
+
+### NPM
+
+```bash
+npm install avlbinstree
+```
