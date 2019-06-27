@@ -8,6 +8,7 @@ declare namespace node {
     left: Instance<T> | null;
     right: Instance<T> | null;
     readonly balanceFactor: number;
+    readonly height: number;
     readonly key: number;
     readonly children: Instance<T>[];
     readonly degree: 0 | 1 | 2;
