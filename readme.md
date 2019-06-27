@@ -28,6 +28,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/avlbinstree/b
 - [Development](#development)
 - [Related](#related)
 - [Team](#team)
+- [License](#license)
 
 ## Install
 
@@ -63,3 +64,7 @@ For more info on how to contribute to the project, please read the [contributing
 ## Team
 
 - Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+
+## License
+
+[MIT](https://github.com/klaussinani/avlbinstree/blob/master/license.md)
