@@ -25,6 +25,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/avlbinstree/b
 
 - [Description](#description)
 - [Install](#install)
+- [Development](#development)
 
 ## Install
 
@@ -39,3 +40,12 @@ yarn add avlbinstree
 ```bash
 npm install avlbinstree
 ```
+
+## Development
+
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/avlbinstree/blob/master/contributing.md).
+
+- Fork the repository and clone it to your machine
+- Navigate to your local fork: `cd avlbinstree`
+- Install the project dependencies: `npm install` or `yarn install`
+- Lint the code and run the tests: `npm test` or `yarn test`
