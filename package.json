@@ -33,7 +33,8 @@
   "scripts": {
     "lint": "xo",
     "test:ts": "tsc --noEmit -p test/types",
-    "test:js": "npm run lint"
+    "test:js": "npm run lint",
+    "test": "npm run test:ts && npm run test:js"
   },
   "devDependencies": {
     "ava": "1.4.1",
