@@ -117,9 +117,6 @@ tree.includes(100);
 tree.height();
 //=> 2
 
-tree.isBalanced();
-//=> true
-
 tree.remove(5);
 /*=>   {13}
  *     /  \
@@ -137,8 +134,20 @@ tree.root.isLeftHeavy();
 tree.max();
 //=> Node { left: null, right: null, key: 15, value: 'E' }
 
+tree.maxKey();
+//=> 15
+
+tree.maxValue();
+//=> 'E'
+
 tree.min();
 //=> Node { left: null, right: null, key: 9, value: 'A' }
+  
+tree.minKey();
+//=> 9
+
+tree.minValue();
+//=> 'A'
 
 tree.remove(15);
 /*=>   {11}
