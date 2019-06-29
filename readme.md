@@ -90,11 +90,11 @@ tree.root.right;
 //=> Node { left: null, right: null, key: 13, value: 'C' }
 
 tree.insert(11, 'D').insert(15, 'E');
-/*=>    9
- *    /  \
- *   5   13
- *      /  \
- *     11  15
+/*=>    {9}
+ *     /  \
+ *   {5}  {13}
+ *        /  \
+ *     {11}  {15}
  */
 
 tree.size();
@@ -121,11 +121,11 @@ tree.isBalanced();
 //=> true
 
 tree.remove(5);
-/*=>   13
- *    /  \
- *   9   15
+/*=>   {13}
+ *     /  \
+ *  {9}  {15}
  *    \
- *    11
+ *   {11}
  */
 
 tree.root.isRightHeavy();
@@ -141,9 +141,9 @@ tree.min();
 //=> Node { left: null, right: null, key: 9, value: 'A' }
 
 tree.remove(15);
-/*=>   11
- *    /  \
- *   9   13
+/*=>   {11}
+ *     /  \
+ *   {9}  {13}
  */
 
 tree.root.isBalanced();
