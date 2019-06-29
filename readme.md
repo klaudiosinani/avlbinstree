@@ -774,7 +774,7 @@ Also available, along with the `Tree` exposed class, is the `Node` class, mainly
 The `key` corresponding to the node instance.
 
 ```js
-const {Node} = require('binstree');
+const {Node} = require('avlbinstree');
 
 const node = new Node(10, 'A');
 // => { key:10, value: 'A', left: null, right: null }
@@ -789,10 +789,9 @@ node.key;
 The value that the node contains.
 
 ```js
-const {Node} = require('binstree');
+const {Node} = require('avlbinstree');
 
 const node = new Node(10, 'A');
-
 // => { key: 10, value: 'A', left: null, right: null }
 node.value;
 //=> 'A'
@@ -807,7 +806,7 @@ node.value = 'B'
 The left sub-tree that the node points to.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -828,7 +827,7 @@ tree.root.left;
 The right sub-tree that the node points to.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -849,7 +848,7 @@ tree.root.right;
 Returns a number corresponding to the balance factor of a node, which is defined as the height difference of its two child sub-trees.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -868,7 +867,7 @@ tree.remove(5).insert(15, 'C').root.balanceFactor;
 Returns an array contacting the children of the instance, where the left child, if present, is the first element of the array, and the right child, if present, is the last element of the array.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -888,7 +887,7 @@ tree.insert(5, 'B').insert(15, 'C').root.children;
 Returns the number of sub-trees that the node points to.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -907,7 +906,7 @@ tree.insert(15, 'C').root.degree;
 Returns the maximum distance of any leaf node from the node instance.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -925,7 +924,7 @@ tree.root.right.height();
 Determines whether a node is a balanced (has a balance factor equal to 0), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -942,7 +941,7 @@ tree.insert(5, 'B').root.isBalanced();
 Determines whether a node is a full node (has two non-null children), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -959,7 +958,7 @@ tree.insert(5, 'B').insert(15, 'C').root.isFull();
 Determines whether a node is an internal node (has at least one non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -976,7 +975,7 @@ tree.insert(5, 'B').root.isInternal();
 Determines whether a node is a leaf node (has no children), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -993,7 +992,7 @@ tree.insert(5, 'B').root.isLeaf();
 Determines whether a node is left heavy (has a balance factor greater than zero), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1012,7 +1011,7 @@ tree.remove(5).insert(10, 'C').root.isLeftPartial();
 Determines whether a node is a left partial node (has ony one left non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1029,7 +1028,7 @@ tree.insert(5, 'B').root.isLeftPartial();
 Determines whether a node is a partial node (has ony one non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1046,7 +1045,7 @@ tree.insert(15, 'B').root.isPartial();
 Determines whether a node is right heavy (has a balance factor less than zero), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1065,7 +1064,7 @@ tree.remove(15).insert(5, 'B').root.isRightHeavy();
 Determines whether a node is a right partial node (has ony one right non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1082,7 +1081,7 @@ tree.insert(15, 'B').root.isRightPartial();
 Returns the maximum distance of any leaf node from the left child of the parent node instance. If the parent node has no left child, then `-1` is returned.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1099,7 +1098,7 @@ tree.insert(5, 'B').root.leftChildHeight();
 Returns the maximum between the heights of the two child nodes of parent instance. If the parent node has no children, then `-1` is returned.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1120,7 +1119,7 @@ tree.insert(1, 'D').root.maxChildHeight();
 Returns the maximum distance of any leaf node from the right child of the parent node instance. If the parent node has no right child, then `-1` is returned.
 
 ```js
-const {Tree} = require('binstree');
+const {Tree} = require('avlbinstree');
 
 const tree = new Tree();
 
@@ -1137,7 +1136,7 @@ tree.insert(15, 'B').root.rightChildHeight();
 Returns an ordered-pair/2-tuple, where the first element is a number corresponding to the `key` of the node, and the last one is a value, that can be of any type, corresponding to the `value` stored in the node.
 
 ```js
-const {Node, Tree} = require('binstree');
+const {Node, Tree} = require('avlbinstree');
 
 const tree = new Tree();
 const node = new Node(5, 'B');
