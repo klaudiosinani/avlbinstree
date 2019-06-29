@@ -257,7 +257,7 @@ class Tree {
         }
 
         if (current.isFull()) {
-          queue.push(current.left, current.right);
+          queue.push(...current.children);
         }
       }
     }
