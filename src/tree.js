@@ -269,24 +269,27 @@ class Tree {
     let {root: current} = this;
 
     if (current) {
-      let sawLeaf = false;
+      let currentDepth = -1;
       const queue = [current];
+      const {height: leafDepth} = current;
 
       while (queue.length > 0) {
-        current = queue.shift();
+        currentDepth += 1;
+        let {length: nodes} = queue;
 
-        if (current.degree === 1) {
-          return false;
-        }
+        while (nodes > 0) {
+          current = queue.shift();
 
-        if (current.isLeaf()) {
-          sawLeaf = true;
-        } else {
-          if (sawLeaf) {
+          if (current.isPartial()) {
             return false;
           }
 
-          queue.push(current.left, current.right);
+          if (current.isLeaf() && leafDepth !== currentDepth) {
+            return false;
+          }
+
+          queue.push(...current.children);
+          nodes--;
         }
       }
     }
