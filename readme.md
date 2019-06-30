@@ -348,7 +348,7 @@ tree.internalNodes();
 - Return Type: `Boolean`
 
 The method returns `true` if the tree is a complete binary search tree, which implies that every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
-In any other case, the method returns false.
+In any other case, the method returns `false`.
 
 ```js
 const {Tree} = require('avlbinstree');
